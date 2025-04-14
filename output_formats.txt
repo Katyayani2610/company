@@ -1,0 +1,37 @@
+Case 1: Tool call
+[
+	{
+		"Action":"Tool call", 
+		"attribute":{
+			"name":<tool name>, 
+			"arguments":<tool arguments in the form of a DICT>
+		}
+	}
+]
+
+
+Case 2: Response
+[
+	{
+		"Action":"Response", 
+		"attribute":<response string>
+	}
+]
+
+
+Case 3: Process Detection 
+[
+	{
+		"Action":<process name>, 
+		"attribute":null
+	}
+]
+
+
+Case 4: No applicable process found
+[
+	{
+		"Action":"Other", 
+		"attribute":<response string>
+	}
+]				

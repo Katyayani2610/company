@@ -1,0 +1,78 @@
+Example 1: Tool call 
+{
+        "input": [
+            {
+                "role": "system",
+                "content": "You are a helpful assistant with access to functions and tools. Use them if required.\n[{\"name\": \"generate_qr_code\", \"description\": \"Generate a QR code for a given input\", \"parameters\": {\"type\": \"object\", \"properties\": {\"data\": {\"type\": \"string\", \"description\": \"The data to encode in the QR code\"}, \"size\": {\"type\": \"integer\", \"description\": \"The size of the QR code\"}}, \"required\": [\"data\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON object with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple output then stack up the JSON object in the LIST in FIFO order.\n \n"
+            },
+            {
+                "role": "user",
+                "content": "<user_input> Hi, I need a QR code for my website. </user_input>"
+            },
+            {
+                "role": "assistant",
+                "content": {
+                    "Action": "Response",
+                    "attribute": "Sure, I can help with that. Could you please provide me with the URL of your website?"
+                }
+            },
+            {
+                "role": "user",
+                "content": "<user_input> Yes, it's www.mywebsite.com. </user_input>"
+            }
+        ],
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "generate_qr_code",
+                    "arguments": {
+                        "data": "www.mywebsite.com",
+                        "size": 200
+                    }
+                }
+            }
+        ]
+    }
+
+
+Example 2: Response 
+{
+        "input": [
+            {
+                "role": "system",
+                "content": "You are a helpful assistant with access to functions and tools. Use them if required.\n[{\"name\": \"create_note\", \"description\": \"Create a new note\", \"parameters\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\", \"description\": \"The title of the note\"}, \"content\": {\"type\": \"string\", \"description\": \"The content of the note\"}}, \"required\": [\"title\", \"content\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON object with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple output then stack up the JSON object in the LIST in FIFO order.\n \n"
+            },
+            {
+                "role": "user",
+                "content": "<user_input> Can you order a pizza for me? </user_input>"
+            }
+        ],
+        "output": [
+            {
+                "Action": "Response",
+                "attribute": "I'm sorry, but as an AI, I don't have the capability to perform external tasks such as ordering a pizza. My current function allows me to create a note for you. If you need to remember to order a pizza later, I can help you create a note for that."
+            }
+        ]
+    }
+
+
+Example 3: Process Identification
+{
+        "input": [
+	    {
+		"role": "system",
+		"content: "Your role is to identify the user's intent and guide the conversation towards one of the supported travel-related processes. You are the *first* step in the conversation flow.\n\n**Supported Processes:**\n\n1.  Booking: The user is making a new booking (e.g., \"make a booking,\" \"book an appointment,\" \"schedule my meeting\").\n2.  Rebooking: The user is rescheduling an existing booking (e.g., \"rebook my flight,\" \"change my appointment time\").\n3.  Cancellation: The user wants to cancel a service, booking, or other request (e.g., \"cancel my booking,\" \"I want to cancel the service\").\n4.  Modification: The user wants to make changes to an existing booking or service (e.g., \"change my reservation,\" \"update my contact information\").\n5.  extra_services: The user is requesting, upgrading, or adding additional services or features to an existing booking (e.g., \"add a meal,\" \"upgrade my seat,\" \"request early check-in\")\n\n**Handling \"Other\" Intents:**\n\nIf the user's intent does *not* clearly fall into one of the supported categories, classify it as **`Other`**. This includes:\n\n*   **Greetings:** (e.g., \"Hi,\" \"Hello,\" \"Good morning\")\n*   **Thanks/Gratitude:** (e.g., \"Thank you,\" \"Thanks,\" \"Appreciate it\")\n*   **General Inquiries/Small Talk:** Questions or statements not directly related to the supported processes.\n*   **Unclear Requests:**  If the user's input is ambiguous or nonsensical.\n\nFor the **`Other`** intent:\n\n*   generate a polite, helpful response that acknowledges the user's input and gently steers the conversation back towards the supported pharmacy-related processes.\n\n**Input:**\n\n*   **`user_input`:** The user's most recent message (string).\n*   **`chat_history`:** The full conversation history (list of strings, alternating between user and assistant messages).  Use the `chat_history` to help determine the intent, especially if the `user_input` is short or ambiguous.\n\n# Output Format \nThe response should be a LIST of JSON object with the following structure:\n```\n[\n{\n    \"Action\":\"<Intent>\",\n    \"attribute\":\"<Response or null>\"\n}\n]\n```\nNote- if the output has multiple output then stack up the JSON object in the LIST in FIFO order."
+	},
+	{
+	     "role": "user",
+	     "content": "<user_input>\nuser: this was a Refundable ticket i believe. \n</user_input>\n\n<chat_history>\nassistant: Hello, null, my name is Jeni. To assist you, I will need your order number. \nuser: Hi. \nuser: Order no : 89sjb5. \nassistant: How can I help you? \nuser: i i am trying to cancel 2 tickets out of 4 booked. \nuser: Can you please help with that. \nassistant: No Refund will be possible for cancellation. \n</chat_history>"
+	}
+    ],
+        "output": [
+            {
+                "Action": "Cancellation",
+                "attribute": null
+            }
+        ]
+    }
