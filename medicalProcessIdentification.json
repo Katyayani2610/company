@@ -1,0 +1,272 @@
+[
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to book a dental cleaning appointment for next Tuesday. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred time and dentist's name"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Can I refill my cholesterol medication? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Prescription Refill",
+                "attribute": "Please provide the medication name and dosage"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need my lab results for the blood test I took last month. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Test Results Inquiry",
+                "attribute": "Please provide your patient ID and test details"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I have been experiencing severe headaches for the past week. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Symptom Inquiry",
+                "attribute": "Please provide details about the headache intensity and frequency"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> What is the cost breakdown of my last visit? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Billing Inquiry",
+                "attribute": "Please provide your billing ID or invoice number"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I would like to receive a copy of all my imaging records. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Medical Records Request",
+                "attribute": "Please provide your patient ID and specify which imaging records you need"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Just saying hi, thanks for your service. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Other",
+                "attribute": "Feel free to ask if you need any assistance"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Schedule an appointment with a specialist regarding my knee pain. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred date and specialist type"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I forgot to refill my asthma inhaler. Can you assist? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Prescription Refill",
+                "attribute": "Please provide the medication name and dosage information"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I noticed an error on my billing statement; please check this out. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Billing Inquiry",
+                "attribute": "Please provide details of the discrepancy and your billing information"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I'm wondering if you could help me find my old X-ray reports. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Medical Records Request",
+                "attribute": "Please provide your patient ID and specify the type of X-ray reports needed"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Can you tell me if my recent allergy test results are available? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Test Results Inquiry",
+                "attribute": "Please provide your patient ID and details about the allergy test"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I've been experiencing persistent chest pain and shortness of breath. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Symptom Inquiry",
+                "attribute": "Please provide details such as onset, duration, and any accompanying symptoms"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule my routine annual check-up. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred date and time for the check-up"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> What's up? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Other",
+                "attribute": "Let me know if you need any further assistance"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to book a dental cleaning appointment for next Tuesday. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred time and dentist's name"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Can I refill my cholesterol medication? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Prescription Refill",
+                "attribute": "Please provide the medication name and dosage"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need my lab results for the blood test I took last month. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Test Results Inquiry",
+                "attribute": "Please provide your patient ID and test details"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I have been experiencing severe headaches for the past week. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Symptom Inquiry",
+                "attribute": "Please provide details about the headache intensity and frequency"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> What is the cost breakdown of my last visit? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Billing Inquiry",
+                "attribute": "Please provide your billing ID or invoice number"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I would like to receive a copy of all my imaging records. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Medical Records Request",
+                "attribute": "Please provide your patient ID and specify which imaging records you need"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Just saying hi, thanks for your service. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Other",
+                "attribute": "Feel free to ask if you need any assistance"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Schedule an appointment with a specialist regarding my knee pain. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred date and specialist type"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I forgot to refill my asthma inhaler. Can you assist? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Prescription Refill",
+                "attribute": "Please provide the medication name and dosage information"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I noticed an error on my billing statement; please check this out. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Billing Inquiry",
+                "attribute": "Please provide details of the discrepancy and your billing information"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I'm wondering if you could help me find my old X-ray reports. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Medical Records Request",
+                "attribute": "Please provide your patient ID and specify the type of X-ray reports needed"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> Can you tell me if my recent allergy test results are available? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Test Results Inquiry",
+                "attribute": "Please provide your patient ID and details about the allergy test"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I've been experiencing persistent chest pain and shortness of breath. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Symptom Inquiry",
+                "attribute": "Please provide details such as onset, duration, and any accompanying symptoms"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule my routine annual check-up. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Appointment Booking",
+                "attribute": "Please provide your preferred date and time for the check-up"
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are a helpful assistant named Marvin that identifies the user's intent and classifies it into one of the supported medical-related processes.\n\nSupported Processes:\n- Appointment Booking\n- Prescription Refill\n- Medical Records Request\n- Symptom Inquiry\n- Test Results Inquiry\n- Billing Inquiry\n- Other (for greetings, thanks, small talk, or unrelated input)\n\n# Output Format\nThe response should be a LIST of JSON object with the following structure:\n[\n    {\n     \"Action\": <One of the intent types above>,\n     \"attribute\": <null or a helpful message if intent is 'Other'>\n    }\n]\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> What's up? </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Other",
+                "attribute": "Let me know if you need any further assistance"
+            }
+        ]
+    }
+]
