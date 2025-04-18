@@ -1,0 +1,722 @@
+[
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Appointment Status\", \"description\": \"Check the status of an existing medical appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check the status of my medical appointment. My patient ID is PAT100239 and the appointment date was 25 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100239",
+                        "appointment_date": "25 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the name of the doctor for the appointment."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Treatment Plan Status\", \"description\": \"Check the status of an existing cancer treatment plan\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"treatment_date\": {\"type\": \"string\", \"description\": \"The date of the treatment\"}}, \"required\": [\"patient_id\", \"treatment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check the status of my cancer treatment plan. My patient ID is PAT100239 and the treatment date was 25 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Treatment Plan Status",
+                    "arguments": {
+                        "patient_id": "PAT100239",
+                        "treatment_date": "25 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of cancer (e.g., breast cancer, lung cancer)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"PET CT Scan Appointment Status\", \"description\": \"Check the status of an existing PET CT scan appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to confirm my PET CT scan appointment. My patient ID is PAT100240 and the appointment date is 30 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "PET CT Scan Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100240",
+                        "appointment_date": "30 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the scan location (e.g., abdomen, chest)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Tumor Surgery Schedule Status\", \"description\": \"Check the status of an existing tumor surgery schedule\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"surgery_date\": {\"type\": \"string\", \"description\": \"The date of the surgery\"}}, \"required\": [\"patient_id\", \"surgery_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check my tumor surgery schedule. My patient ID is PAT100241 and the surgery date is 15 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Tumor Surgery Schedule Status",
+                    "arguments": {
+                        "patient_id": "PAT100241",
+                        "surgery_date": "15 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the name of the surgeon for the tumor surgery."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Chemotherapy Session Details\", \"description\": \"Check the details of an existing chemotherapy session\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"session_date\": {\"type\": \"string\", \"description\": \"The date of the chemotherapy session\"}}, \"required\": [\"patient_id\", \"session_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need details about my chemotherapy session. My patient ID is PAT100242 and the session date is 20 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Chemotherapy Session Details",
+                    "arguments": {
+                        "patient_id": "PAT100242",
+                        "session_date": "20 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the duration of the chemotherapy session."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Radiation Therapy Appointment Status\", \"description\": \"Check the status of an existing radiation therapy appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to confirm my radiation therapy appointment. My patient ID is PAT100243 and the appointment date is 05 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Radiation Therapy Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100243",
+                        "appointment_date": "05 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of radiation therapy (e.g., external beam, brachytherapy)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Follow-up Consultation Status\", \"description\": \"Check the status of an existing follow-up consultation\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"consultation_date\": {\"type\": \"string\", \"description\": \"The date of the consultation\"}}, \"required\": [\"patient_id\", \"consultation_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule a follow-up consultation. My patient ID is PAT100244 and the consultation date is 10 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Consultation Status",
+                    "arguments": {
+                        "patient_id": "PAT100244",
+                        "consultation_date": "10 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the specialty of the doctor (e.g., oncologist, radiologist)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Lab Test Results Status\", \"description\": \"Check the status of an existing lab test\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"test_date\": {\"type\": \"string\", \"description\": \"The date of the lab test\"}}, \"required\": [\"patient_id\", \"test_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check my lab test results. My patient ID is PAT100245 and the test date is 15 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Lab Test Results Status",
+                    "arguments": {
+                        "patient_id": "PAT100245",
+                        "test_date": "15 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of lab test (e.g., blood test, biopsy)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Medication Prescription Status\", \"description\": \"Check the status of an existing medication prescription\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"prescription_date\": {\"type\": \"string\", \"description\": \"The date of the prescription\"}}, \"required\": [\"patient_id\", \"prescription_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to confirm my medication prescription. My patient ID is PAT100246 and the prescription date is 20 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Medication Prescription Status",
+                    "arguments": {
+                        "patient_id": "PAT100246",
+                        "prescription_date": "20 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the dosage of the medication."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Immunotherapy Session Details\", \"description\": \"Check the details of an existing immunotherapy session\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"session_date\": {\"type\": \"string\", \"description\": \"The date of the immunotherapy session\"}}, \"required\": [\"patient_id\", \"session_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check the details of my immunotherapy session. My patient ID is PAT100247 and the session date is 25 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Immunotherapy Session Details",
+                    "arguments": {
+                        "patient_id": "PAT100247",
+                        "session_date": "25 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the frequency of the immunotherapy sessions."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Surgical Follow-up Status\", \"description\": \"Check the status of an existing surgical follow-up\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"follow_up_date\": {\"type\": \"string\", \"description\": \"The date of the follow-up\"}}, \"required\": [\"patient_id\", \"follow_up_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule a follow-up after my surgery. My patient ID is PAT100248 and the follow-up date is 10 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Surgical Follow-up Status",
+                    "arguments": {
+                        "patient_id": "PAT100248",
+                        "follow_up_date": "10 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the date of the surgery."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Genetic Testing Appointment Status\", \"description\": \"Check the status of an existing genetic testing appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to confirm my genetic testing appointment. My patient ID is PAT100249 and the appointment date is 10 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Genetic Testing Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100249",
+                        "appointment_date": "10 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the purpose of the genetic test (e.g., cancer risk assessment)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Pain Management Plan Status\", \"description\": \"Check the status of an existing pain management plan\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"plan_date\": {\"type\": \"string\", \"description\": \"The date of the pain management plan\"}}, \"required\": [\"patient_id\", \"plan_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to check my pain management plan. My patient ID is PAT100250 and the plan date is 15 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Pain Management Plan Status",
+                    "arguments": {
+                        "patient_id": "PAT100250",
+                        "plan_date": "15 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the severity of the pain (e.g., mild, moderate, severe)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Nutrition Counseling Session Status\", \"description\": \"Check the status of an existing nutrition counseling session\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"session_date\": {\"type\": \"string\", \"description\": \"The date of the nutrition counseling session\"}}, \"required\": [\"patient_id\", \"session_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to schedule a nutrition counseling session. My patient ID is PAT100251 and the session date is 20 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Nutrition Counseling Session Status",
+                    "arguments": {
+                        "patient_id": "PAT100251",
+                        "session_date": "20 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide any dietary restrictions (e.g., gluten-free, low-sugar)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Psychological Support Session Status\", \"description\": \"Check the status of an existing psychological support session\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"session_date\": {\"type\": \"string\", \"description\": \"The date of the psychological support session\"}}, \"required\": [\"patient_id\", \"session_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule a psychological support session. My patient ID is PAT100252 and the session date is 25 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Psychological Support Session Status",
+                    "arguments": {
+                        "patient_id": "PAT100252",
+                        "session_date": "25 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of psychological support (e.g., counseling, therapy)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Rehabilitation Program Status\", \"description\": \"Check the status of an existing rehabilitation program\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"program_date\": {\"type\": \"string\", \"description\": \"The date of the rehabilitation program\"}}, \"required\": [\"patient_id\", \"program_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check my rehabilitation program details. My patient ID is PAT100253 and the program date is 30 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Rehabilitation Program Status",
+                    "arguments": {
+                        "patient_id": "PAT100253",
+                        "program_date": "30 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the duration of the rehabilitation program."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Clinical Trial Enrollment Status\", \"description\": \"Check the status of an existing clinical trial enrollment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"enrollment_date\": {\"type\": \"string\", \"description\": \"The date of the enrollment\"}}, \"required\": [\"patient_id\", \"enrollment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to enroll in a clinical trial. My patient ID is PAT100254 and the enrollment date is 05 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Clinical Trial Enrollment Status",
+                    "arguments": {
+                        "patient_id": "PAT100254",
+                        "enrollment_date": "05 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the phase of the clinical trial (e.g., Phase I, Phase II)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Blood Transfusion Schedule Status\", \"description\": \"Check the status of an existing blood transfusion schedule\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"transfusion_date\": {\"type\": \"string\", \"description\": \"The date of the blood transfusion\"}}, \"required\": [\"patient_id\", \"transfusion_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to confirm my blood transfusion schedule. My patient ID is PAT100255 and the transfusion date is 10 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Blood Transfusion Schedule Status",
+                    "arguments": {
+                        "patient_id": "PAT100255",
+                        "transfusion_date": "10 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the patient\u2019s blood type."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"MRI Scan Appointment Status\", \"description\": \"Check the status of an existing MRI scan appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to confirm my MRI scan appointment. My patient ID is PAT100256 and the appointment date is 15 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "MRI Scan Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100256",
+                        "appointment_date": "15 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the area to be scanned (e.g., brain, spine)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Bone Marrow Biopsy Details\", \"description\": \"Check the details of an existing bone marrow biopsy\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"biopsy_date\": {\"type\": \"string\", \"description\": \"The date of the biopsy\"}}, \"required\": [\"patient_id\", \"biopsy_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to check the details of my bone marrow biopsy. My patient ID is PAT100257 and the biopsy date is 20 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Bone Marrow Biopsy Details",
+                    "arguments": {
+                        "patient_id": "PAT100257",
+                        "biopsy_date": "20 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the date of the biopsy."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Palliative Care Plan Status\", \"description\": \"Check the status of an existing palliative care plan\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"plan_date\": {\"type\": \"string\", \"description\": \"The date of the palliative care plan\"}}, \"required\": [\"patient_id\", \"plan_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to check my palliative care plan. My patient ID is PAT100258 and the plan date is 25 Mar 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Palliative Care Plan Status",
+                    "arguments": {
+                        "patient_id": "PAT100258",
+                        "plan_date": "25 Mar 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the level of care required (e.g., home care, hospice care)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Screening Appointment Status\", \"description\": \"Check the status of an existing cancer screening appointment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"appointment_date\": {\"type\": \"string\", \"description\": \"The date of the appointment\"}}, \"required\": [\"patient_id\", \"appointment_date\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to confirm my cancer screening appointment. My patient ID is PAT100259 and the appointment date is 20 Apr 2025. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Screening Appointment Status",
+                    "arguments": {
+                        "patient_id": "PAT100259",
+                        "appointment_date": "20 Apr 2025"
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of cancer screening (e.g., mammogram, colonoscopy)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"PET Scan Results\", \"description\": \"Check the results of a PET scan\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"scan_date\": {\"type\": \"string\", \"description\": \"The date of the PET scan\"}}, \"required\": [\"patient_id\", \"scan_date\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check my PET scan results. My patient ID is PAT100261. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "PET Scan Results",
+                    "arguments": {
+                        "patient_id": "PAT100261",
+                        "scan_date": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the date of the PET scan."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Tumor Marker Test Results\", \"description\": \"Check the results of a tumor marker test\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"marker_type\": {\"type\": \"string\", \"description\": \"The type of tumor marker tested\"}}, \"required\": [\"patient_id\", \"marker_type\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to check the results of my tumor marker test. My patient ID is PAT100262. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Tumor Marker Test Results",
+                    "arguments": {
+                        "patient_id": "PAT100262",
+                        "marker_type": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of tumor marker tested (e.g., CA-125, PSA)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Support Group\", \"description\": \"Join a cancer support group\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"group_type\": {\"type\": \"string\", \"description\": \"The type of support group\"}}, \"required\": [\"patient_id\", \"group_type\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to join a cancer support group. My patient ID is PAT100263. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Support Group",
+                    "arguments": {
+                        "patient_id": "PAT100263",
+                        "group_type": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of support group (e.g., breast cancer, prostate cancer)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Post-Surgery Rehabilitation Schedule\", \"description\": \"Check the post-surgery rehabilitation schedule\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"rehabilitation_type\": {\"type\": \"string\", \"description\": \"The type of rehabilitation\"}}, \"required\": [\"patient_id\", \"rehabilitation_type\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to check my post-surgery rehabilitation schedule. My patient ID is PAT100264. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Post-Surgery Rehabilitation Schedule",
+                    "arguments": {
+                        "patient_id": "PAT100264",
+                        "rehabilitation_type": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of rehabilitation (e.g., physical therapy, occupational therapy)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Pain Management Consultation\", \"description\": \"Schedule a consultation for cancer pain management\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"pain_management_method\": {\"type\": \"string\", \"description\": \"The method of pain management\"}}, \"required\": [\"patient_id\", \"pain_management_method\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to schedule a consultation for cancer pain management. My patient ID is PAT100265. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Pain Management Consultation",
+                    "arguments": {
+                        "patient_id": "PAT100265",
+                        "pain_management_method": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the method of pain management (e.g., medication, nerve block)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Genetic Counseling\", \"description\": \"Schedule a genetic counseling session for cancer risk assessment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"family_history_details\": {\"type\": \"string\", \"description\": \"Details of the family history\"}}, \"required\": [\"patient_id\", \"family_history_details\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule a genetic counseling session for cancer risk assessment. My patient ID is PAT100266. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Genetic Counseling",
+                    "arguments": {
+                        "patient_id": "PAT100266",
+                        "family_history_details": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the details of your family history."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Tumor Imaging Follow-up\", \"description\": \"Check the follow-up imaging schedule for a tumor\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"imaging_type\": {\"type\": \"string\", \"description\": \"The type of imaging\"}}, \"required\": [\"patient_id\", \"imaging_type\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I want to check my follow-up imaging schedule for my tumor. My patient ID is PAT100267. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Tumor Imaging Follow-up",
+                    "arguments": {
+                        "patient_id": "PAT100267",
+                        "imaging_type": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide the type of imaging (e.g., MRI, CT scan)."
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "input": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 01 Apr 2025\n\nYou are Marvin, a helpful medical assistant with access to functions and tools. Use them if required.\n[{\"name\": \"Cancer Treatment Side Effects Management\", \"description\": \"Schedule a consultation to manage side effects of cancer treatment\", \"parameters\": {\"type\": \"object\", \"properties\": {\"patient_id\": {\"type\": \"string\", \"description\": \"The ID of the patient\"}, \"specific_side_effects\": {\"type\": \"string\", \"description\": \"Details of specific side effects experienced\"}}, \"required\": [\"patient_id\", \"specific_side_effects\"]}}, {\"name\": \"Follow-up Information\", \"description\": \"Request for missing information\", \"parameters\": {\"type\": \"object\", \"properties\": {\"missing_info\": {\"type\": \"string\", \"description\": \"The missing information needed to complete the request\"}}, \"required\": [\"missing_info\"]}}]\n\n# Output Format \nThe response should be a LIST of JSON objects with the following structure:\n```\n[\n    {\n     \"Action\":<either Response or Tool call as per the output>\n     \"attribute\":< in case of response return the string and in case of Tool call make it as a JSON>\n    }\n]\n```\nNote- if the output has multiple outputs then stack up the JSON objects in the LIST in FIFO order.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n<user_input> I need to schedule a consultation to manage side effects of my cancer treatment. My patient ID is PAT100268. </user_input>\n# Notes - output the result in Output Format only, DONOT return anything else\n<|eot_id|>",
+        "output": [
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Cancer Treatment Side Effects Management",
+                    "arguments": {
+                        "patient_id": "PAT100268",
+                        "specific_side_effects": ""
+                    }
+                }
+            },
+            {
+                "Action": "Tool call",
+                "attribute": {
+                    "name": "Follow-up Information",
+                    "arguments": {
+                        "missing_info": "Please provide details of specific side effects experienced (e.g., nausea, fatigue)."
+                    }
+                }
+            }
+        ]
+    }
+]

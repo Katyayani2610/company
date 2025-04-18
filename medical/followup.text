@@ -1,0 +1,304 @@
+1. Cancer Treatment Plan
+Example Scenario: A patient at Rajiv Gandhi Institute needs to check their cancer treatment plan.
+
+Initial Request: "I want to check my cancer treatment plan. My patient ID is PAT100239."
+Missing Value: Type of cancer.
+Follow-up Tool Call: Request for the type of cancer (e.g., breast cancer, lung cancer).
+2. PET CT Scan Appointment
+Example Scenario: A patient at MAX Hospital wants to confirm their PET CT scan appointment.
+
+Initial Request: "I need to confirm my PET CT scan appointment. My patient ID is PAT100240 and the appointment date is 30 Mar 2025."
+Missing Value: Scan location.
+Follow-up Tool Call: Request for the scan location (e.g., abdomen, chest).
+3. Tumor Surgery Schedule
+Example Scenario: A patient at Rajiv Gandhi Institute needs to check the schedule for their tumor surgery.
+
+Initial Request: "I want to check my tumor surgery schedule. My patient ID is PAT100241."
+Missing Value: Surgeon’s name.
+Follow-up Tool Call: Request for the name of the surgeon.
+4. Chemotherapy Session Details
+Example Scenario: A patient at MAX Hospital wants to know the details of their chemotherapy session.
+
+Initial Request: "I need details about my chemotherapy session. My patient ID is PAT100242."
+Missing Value: Session duration.
+Follow-up Tool Call: Request for the duration of the chemotherapy session.
+5. Radiation Therapy Appointment
+Example Scenario: After confirming the chemotherapy session details, the same patient at Rajiv Gandhi Institute needs to confirm their radiation therapy appointment.
+
+Initial Request: "I want to confirm my radiation therapy appointment. My patient ID is PAT100243 and the appointment date is 05 Apr 2025."
+Missing Value: Therapy type.
+Follow-up Tool Call: Request for the type of radiation therapy (e.g., external beam, brachytherapy).
+6. Follow-up Consultation
+Example Scenario: After confirming the radiation therapy appointment, the patient at MAX Hospital wants to schedule a follow-up consultation.
+
+Initial Request: "I need to schedule a follow-up consultation. My patient ID is PAT100244."
+Missing Value: Doctor’s specialty.
+Follow-up Tool Call: Request for the specialty of the doctor (e.g., oncologist, radiologist).
+7. Lab Test Results
+Example Scenario: After scheduling the follow-up consultation, the patient at Rajiv Gandhi Institute needs to check their lab test results.
+
+Initial Request: "I want to check my lab test results. My patient ID is PAT100245."
+Missing Value: Test type.
+Follow-up Tool Call: Request for the type of lab test (e.g., blood test, biopsy).
+8. Medication Prescription
+Example Scenario: After checking the lab test results, the patient at MAX Hospital wants to confirm their medication prescription.
+
+Initial Request: "I need to confirm my medication prescription. My patient ID is PAT100246."
+Missing Value: Dosage.
+Follow-up Tool Call: Request for the dosage of the medication.
+9. Immunotherapy Session
+Example Scenario: After confirming the medication prescription, the patient at Rajiv Gandhi Institute needs to check the details of their immunotherapy session.
+
+Initial Request: "I want to check the details of my immunotherapy session. My patient ID is PAT100247."
+Missing Value: Session frequency.
+Follow-up Tool Call: Request for the frequency of the immunotherapy sessions.
+10. Surgical Follow-up
+Example Scenario: After checking the immunotherapy session details, the patient at MAX Hospital wants to schedule a follow-up after surgery.
+
+Initial Request: "I need to schedule a follow-up after my surgery. My patient ID is PAT100248."
+Missing Value: Surgery date.
+Follow-up Tool Call: Request for the date of the surgery.
+11. Genetic Testing Appointment
+Example Scenario: After scheduling the surgical follow-up, the patient at Rajiv Gandhi Institute needs to confirm their genetic testing appointment.
+
+Initial Request: "I want to confirm my genetic testing appointment. My patient ID is PAT100249 and the appointment date is 10 Apr 2025."
+Missing Value: Test purpose.
+Follow-up Tool Call: Request for the purpose of the genetic test (e.g., cancer risk assessment).
+12. Pain Management Plan
+Example Scenario: After confirming the genetic testing appointment, the patient at MAX Hospital wants to check their pain management plan.
+
+Initial Request: "I need to check my pain management plan. My patient ID is PAT100250."
+Missing Value: Pain severity.
+Follow-up Tool Call: Request for the severity of the pain (e.g., mild, moderate, severe).
+13. Nutrition Counseling
+Example Scenario: After checking the pain management plan, the patient at Rajiv Gandhi Institute needs to schedule a nutrition counseling session.
+
+Initial Request: "I want to schedule a nutrition counseling session. My patient ID is PAT100251."
+Missing Value: Dietary restrictions.
+Follow-up Tool Call: Request for any dietary restrictions (e.g., gluten-free, low-sugar).
+14. Psychological Support Session
+Example Scenario: After scheduling the nutrition counseling session, the patient at MAX Hospital wants to schedule a psychological support session.
+
+Initial Request: "I need to schedule a psychological support session. My patient ID is PAT100252."
+Missing Value: Type of support.
+Follow-up Tool Call: Request for the type of psychological support (e.g., counseling, therapy).
+15. Rehabilitation Program
+Example Scenario: After scheduling the psychological support session, the patient at Rajiv Gandhi Institute needs to check their rehabilitation program details.
+
+Initial Request: "I want to check my rehabilitation program details. My patient ID is PAT100253."
+Missing Value: Program duration.
+Follow-up Tool Call: Request for the duration of the rehabilitation program.
+16. Clinical Trial Enrollment
+Example Scenario: After checking the rehabilitation program details, the patient at MAX Hospital wants to enroll in a clinical trial.
+
+Initial Request: "I want to enroll in a clinical trial. My patient ID is PAT100254."
+Missing Value: Trial phase.
+Follow-up Tool Call: Request for the phase of the clinical trial (e.g., Phase I, Phase II).
+17. Blood Transfusion Schedule
+Example Scenario: After enrolling in the clinical trial, the patient at Rajiv Gandhi Institute needs to confirm their blood transfusion schedule.
+
+Initial Request: "I need to confirm my blood transfusion schedule. My patient ID is PAT100255."
+Missing Value: Blood type.
+Follow-up Tool Call: Request for the patient’s blood type.
+18. MRI Scan Appointment
+Example Scenario: After confirming the blood transfusion schedule, the patient at MAX Hospital wants to confirm their MRI scan appointment.
+
+Initial Request: "I want to confirm my MRI scan appointment. My patient ID is PAT100256 and the appointment date is 15 Apr 2025."
+Missing Value: Scan area.
+Follow-up Tool Call: Request for the area to be scanned (e.g., brain, spine).
+19. Bone Marrow Biopsy
+Example Scenario: After confirming the MRI scan appointment, the patient at Rajiv Gandhi Institute needs to check the details of their bone marrow biopsy.
+
+Initial Request: "I need to check the details of my bone marrow biopsy. My patient ID is PAT100257."
+Missing Value: Biopsy date.
+Follow-up Tool Call: Request for the date of the biopsy.
+20. Palliative Care Plan
+Example Scenario: After checking the bone marrow biopsy details, the patient at MAX Hospital wants to check their palliative care plan.
+
+Initial Request: "I need to check my palliative care plan. My patient ID is PAT100258."
+Missing Value: Care level.
+Follow-up Tool Call: Request for the level of care required (e.g., home care, hospice care).
+21. Cancer Screening Appointment
+Example Scenario: After checking the palliative care plan, the patient at Rajiv Gandhi Institute needs to confirm their cancer screening appointment.
+
+Initial Request: "I want to confirm my cancer screening appointment. My patient ID is PAT100259 and the appointment date is 20 Apr 2025."
+Missing Value: Screening type.
+Follow-up Tool Call: Request for the type of cancer screening (e.g., mammogram, colonoscopy).
+22. Oncology Consultation
+Example Scenario: After confirming the cancer screening appointment, the patient at MAX Hospital wants to schedule an oncology consultation.
+
+Initial Request: "I need to schedule an oncology consultation. My patient ID is PAT100260."
+Missing Value: Consultation reason.
+Follow-up Tool Call: Request for the reason for the consultation (e.g., new diagnosis, treatment plan review).
+23. PET Scan Results
+Example Scenario: After scheduling the oncology consultation, the patient at Rajiv Gandhi Institute needs to check their PET scan results.
+
+Initial Request: "I want to check my PET scan results. My patient ID is PAT100261."
+Missing Value: Scan date.
+Follow-up Tool Call: Request for the date of the PET scan.
+24. Tumor Marker Test
+Example Scenario: After checking the PET scan results, the patient at MAX Hospital wants to check the results of their tumor marker test.
+
+Initial Request: "I need to check the results of my tumor marker test. My patient ID is PAT100262."
+Missing Value: Marker type.
+Follow-up Tool Call: Request for the type of tumor marker tested (e.g., CA-125, PSA).
+25. Cancer Support Group
+Example Scenario: After checking the tumor marker test results, the patient at Rajiv Gandhi Institute wants to join a cancer support group.
+
+Initial Request: "I want to join a cancer support group. My patient ID is PAT100263."
+Missing Value: Group type.
+Follow-up Tool Call: Request for the type of support group (e.g., breast cancer, prostate cancer).
+26. Post-Surgery Rehabilitation
+Example Scenario: After joining the cancer support group, the patient at MAX Hospital needs to check their post-surgery rehabilitation schedule.
+
+Initial Request: "I need to check my post-surgery rehabilitation schedule. My patient ID is PAT100264."
+Missing Value: Rehabilitation type.
+Follow-up Tool Call: Request for the type of rehabilitation (e.g., physical therapy, occupational therapy).
+27. Cancer Pain Management Consultation
+Example Scenario: After checking the post-surgery rehabilitation schedule, the patient at Rajiv Gandhi Institute wants to schedule a consultation for cancer pain management.
+
+Initial Request: "I want to schedule a consultation for cancer pain management. My patient ID is PAT100265."
+Missing Value: Pain management method.
+Follow-up Tool Call: Request for the method of pain management (e.g., medication, nerve block).
+28. Cancer Genetic Counseling
+Example Scenario: After scheduling the cancer pain management consultation, the patient at MAX Hospital needs to schedule a genetic counseling session for cancer risk assessment.
+
+Initial Request: "I need to schedule a genetic counseling session for cancer risk assessment. My patient ID is PAT100266."
+Missing Value: Family history details.
+Follow-up Tool Call: Request for details of family history related to cancer.
+29. Tumor Imaging Follow-up
+Example Scenario: After scheduling the genetic counseling session, the patient at Rajiv Gandhi Institute needs to check the follow-up imaging schedule for their tumor.
+
+Initial Request: "I want to check my follow-up imaging schedule for my tumor. My patient ID is PAT100267."
+Missing Value: Imaging type.
+Follow-up Tool Call: Request for the type of imaging (e.g., MRI, CT scan).
+30. Cancer Treatment Side Effects Management
+Example Scenario: After checking the follow-up imaging schedule, the patient at MAX Hospital wants to schedule a consultation to manage side effects of cancer treatment.
+
+Initial Request: "I need to schedule a consultation to manage side effects of my cancer treatment. My patient ID is PAT100268."
+Missing Value: Specific side effects.
+Follow-up Tool Call: Request for details of specific side effects experienced (e.g., nausea, fatigue).
+
+/* change slot value of tool call as per user request*/
+
+Sure! Changing the slot value of a tool call based on user request involves modifying the parameters or inputs that the tool uses to perform its function. Here's a step-by-step explanation:
+
+Identify the Tool and Slot: Determine which tool you're working with and the specific slot (parameter) that needs to be changed. For example, if you're using a search tool, the slot might be the search query.
+
+Understand User Request: Clearly understand what the user wants to change. This could be a new search term, a different date range, or any other parameter that the tool accepts.
+
+Modify the Slot Value: Update the slot value with the new information provided by the user. This involves replacing the old value with the new one.
+
+Execute the Tool Call: Run the tool with the updated slot value to perform the desired action. This could be fetching new search results, generating a different image, or any other function the tool is designed to perform.
+
+Return Results: Provide the user with the results of the tool call, ensuring that the output matches their request.
+
+Here's a simple example:
+
+Original Tool Call: search_web(query="latest news")
+User Request: Change the query to "latest technology news"
+Modified Tool Call: search_web(query="latest technology news")
+Sure! Here's how each example can be linked to the next in a sequence:
+
+1. **Appointment Status Tool**: User updates the appointment date from "25 Mar 2025" to "30 Mar 2025".
+   - **Prescription Refill Tool**: After checking the appointment status, the user realizes they need a refill for their medication and changes the medication from "Aspirin" to "Ibuprofen".
+
+2. **Prescription Refill Tool**: User changes the medication from "Aspirin" to "Ibuprofen".
+   - **Lab Test Results Tool**: After refilling the prescription, the user wants to check lab test results for a different test, changing the test type from "blood test" to "urine test".
+
+3. **Lab Test Results Tool**: User requests to check results for a different test, changing the test type from "blood test" to "urine test".
+   - **Doctor Availability Tool**: After reviewing lab test results, the user needs to schedule a follow-up appointment and modifies the doctor's name from "Dr. Smith" to "Dr. Johnson".
+
+4. **Doctor Availability Tool**: User modifies the doctor's name from "Dr. Smith" to "Dr. Johnson".
+   - **Symptom Checker Tool**: While waiting for the appointment, the user experiences new symptoms and updates the symptom from "headache" to "fever".
+
+5. **Symptom Checker Tool**: User updates the symptom from "headache" to "fever".
+   - **Medical History Tool**: To provide more context to the doctor, the user requests to view records for a different year, changing the year from "2024" to "2023".
+
+6. **Medical History Tool**: User requests to view records for a different year, changing the year from "2024" to "2023".
+   - **Insurance Coverage Tool**: After reviewing medical history, the user checks their insurance coverage and changes the insurance provider from "Provider A" to "Provider B".
+
+7. **Insurance Coverage Tool**: User changes the insurance provider from "Provider A" to "Provider B".
+   - **Appointment Booking Tool**: With updated insurance information, the user books a new appointment and updates the preferred time slot from "morning" to "afternoon".
+
+8. **Appointment Booking Tool**: User updates the preferred time slot from "morning" to "afternoon".
+   - **Vaccination Status Tool**: Before the appointment, the user checks their vaccination status and requests to check the status for a different vaccine, changing the vaccine from "COVID-19" to "Influenza".
+
+9. **Vaccination Status Tool**: User requests to check the status for a different vaccine, changing the vaccine from "COVID-19" to "Influenza".
+   - **Dietary Recommendations Tool**: After updating vaccination status, the user seeks dietary recommendations and modifies the dietary restriction from "gluten-free" to "vegan".
+
+10. **Dietary Recommendations Tool**: User modifies the dietary restriction from "gluten-free" to "vegan".
+    - **Exercise Recommendations Tool**: With new dietary guidelines, the user also seeks exercise recommendations and changes the exercise type from "running" to "swimming".
+
+11. **Exercise Recommendations Tool**: User changes the exercise type from "running" to "swimming".
+    - **Mental Health Support Tool**: To complement physical health, the user seeks mental health support and updates the type of support from "therapy" to "meditation".
+
+12. **Mental Health Support Tool**: User updates the type of support from "therapy" to "meditation".
+    - **Medication Interaction Tool**: While considering new mental health practices, the user checks medication interactions and requests to check interactions for a different medication, changing the medication from "Paracetamol" to "Amoxicillin".
+
+13. **Medication Interaction Tool**: User requests to check interactions for a different medication, changing the medication from "Paracetamol" to "Amoxicillin".
+    - **Allergy Information Tool**: After checking medication interactions, the user updates their allergy information and changes the allergy from "pollen" to "dust mites".
+
+13. **Medication Interaction Tool**: User requests to check interactions for a different medication, changing the medication from "Paracetamol" to "Amoxicillin".
+    - **Allergy Information Tool**: After checking medication interactions, the user updates their allergy information and changes the allergy from "pollen" to "dust mites".
+14. **Allergy Information Tool**: User changes the allergy from "pollen" to "dust mites".
+
+Health Monitoring Tool: To monitor their health, the user updates the monitoring parameter from "blood pressure" to "heart rate".
+
+15. **Health Monitoring Tool**: User updates the monitoring parameter from "blood pressure" to "heart rate".
+    - **Specialist Referral Tool**: Based on health monitoring results, the user seeks a specialist referral and modifies the specialist type from "cardiologist" to "neurologist".
+
+16. **Specialist Referral Tool**: User modifies the specialist type from "cardiologist" to "neurologist".
+
+    -**Emergency Contact Tool**: Preparing for specialist visits, the user updates their emergency contact and changes the emergency contact from "John Doe" to "Jane Doe"
+17. **Emergency Contact Tool**: User changes the emergency contact from "John Doe" to "Jane Doe".
+    - **Symptom Tracker Tool**: To keep track of ongoing symptoms, the user updates the symptom tracking period from "weekly" to "daily".
+
+18. **Symptom Tracker Tool**: User updates the symptom tracking period from "weekly" to "daily".
+    - **Medical Advice Tool**: Based on tracked symptoms, the user seeks medical advice for a different condition, changing the condition from "cold" to "flu".
+
+19. **Medical Advice Tool**: User requests advice for a different condition, changing the condition from "cold" to "flu".
+    - **Appointment Reminder Tool**: To ensure they don't miss their appointment, the user changes the reminder time from "1 day before" to "2 hours before".
+
+20. **Appointment Reminder Tool**: User changes the reminder time from "1 day before" to "2 hours before".
+    - **Health Risk Assessment Tool**: Finally, the user updates their health risk assessment and changes the risk factor from "smoking" to "high cholesterol".
+
+21. **Health Risk Assessment Tool**: User updates the risk factor from "smoking" to "high cholesterol".
+
+Each tool call is linked to the next by the user's evolving needs and actions, creating a seamless flow of medical assistance.
+
+Here are 21 examples of cases where changing the slot value of a tool call based on user request might be necessary for a medical assistant:
+
+1. **Appointment Status Tool**: User updates the appointment date from "25 Mar 2025" to "30 Mar 2025".
+2. **Prescription Refill Tool**: User changes the medication from "Aspirin" to "Ibuprofen".
+3. **Lab Test Results Tool**: User requests to check results for a different test, changing the test type from "blood test" to "urine test".
+4. **Doctor Availability Tool**: User modifies the doctor's name from "Dr. Smith" to "Dr. Johnson".
+5. **Symptom Checker Tool**: User updates the symptom from "headache" to "fever".
+6. **Medical History Tool**: User requests to view records for a different year, changing the year from "2024" to "2023".
+7. **Insurance Coverage Tool**: User changes the insurance provider from "Provider A" to "Provider B".
+8. **Appointment Booking Tool**: User updates the preferred time slot from "morning" to "afternoon".
+9. **Vaccination Status Tool**: User requests to check the status for a different vaccine, changing the vaccine from "COVID-19" to "Influenza".
+10. **Dietary Recommendations Tool**: User modifies the dietary restriction from "gluten-free" to "vegan".
+11. **Exercise Recommendations Tool**: User changes the exercise type from "running" to "swimming".
+12. **Mental Health Support Tool**: User updates the type of support from "therapy" to "meditation".
+13. **Medication Interaction Tool**: User requests to check interactions for a different medication, changing the medication from "Paracetamol" to "Amoxicillin".
+14. **Allergy Information Tool**: User changes the allergy from "pollen" to "dust mites".
+15. **Health Monitoring Tool**: User updates the monitoring parameter from "blood pressure" to "heart rate".
+16. **Specialist Referral Tool**: User modifies the specialist type from "cardiologist" to "neurologist".
+17. **Emergency Contact Tool**: User changes the emergency contact from "John Doe" to "Jane Doe".
+18. **Symptom Tracker Tool**: User updates the symptom tracking period from "weekly" to "daily".
+19. **Medical Advice Tool**: User requests advice for a different condition, changing the condition from "cold" to "flu".
+20. **Appointment Reminder Tool**: User changes the reminder time from "1 day before" to "2 hours before".
+21. **Health Risk Assessment Tool**: User updates the risk factor from "smoking" to "high cholesterol".
+
+Now, here's the step-by-step explanation for changing the slot value of a tool call based on user request:
+
+1. **Identify the Tool and Slot**: Determine which tool you're working with and the specific slot (parameter) that needs to be changed. For example, if you're using an appointment status tool, the slot might be the appointment date.
+
+2. **Understand User Request**: Clearly understand what the user wants to change. This could be a new appointment date, a different medication, or any other parameter that the tool accepts.
+
+3. **Modify the Slot Value**: Update the slot value with the new information provided by the user. This involves replacing the old value with the new one.
+
+4. **Execute the Tool Call**: Run the tool with the updated slot value to perform the desired action. This could be checking appointment status, refilling a prescription, or any other function the tool is designed to perform.
+
+5. **Return Results**: Provide the user with the results of the tool call, ensuring that the output matches their request.
